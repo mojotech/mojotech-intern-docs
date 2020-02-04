@@ -87,20 +87,6 @@ Opportunities:
 
 https://github.com/mojotech/allocate
 
-### Pivotal Tracker pointing tool
-
-A pivotal tracking tool for pointing stories as a team. Currently teams have count down through something like slack before posting estimates to avoid confirmation bias. This would provide a means to integrate with pivotal tracker and collect estimates to then be reconciled to a final estimate.
-
-Technologies: TBD
-
-Opportunities:
-* Bootstrap a new project
-* Dog-fooding. Use the tool you're working on for tasks 
-* Design team has mentioned interest
-* Integrations with pivotal tracker and slack
-* Develop an API
-* Different client methods (web, cli, slack)
-
 ### Standup Hub
 
 Project management tool to share team stand ups.
@@ -154,3 +140,19 @@ Opportunities:
 * Adopt an existing projects and address its technical debt (referencing react-native guestbook)
 * Working in a mobile environment
 * Present comparison between flutter and react-native
+
+### Pivotal Tracker pointing tool
+
+A pivotal tracking tool for pointing stories as a team. Currently teams have count down through something like slack before posting estimates to avoid confirmation bias. This would provide a means to integrate with pivotal tracker and collect estimates to then be reconciled to a final estimate.
+
+Technologies: TBD
+
+Opportunities:
+* Bootstrap a new project
+* Dog-fooding. Use the tool you're working on for tasks 
+* Design team has mentioned interest
+* Integrations with pivotal tracker and slack
+* Develop an API
+* Different client methods (web, cli, slack)
+
+Existing repos: github.com/mojotech/pt-estimator/
