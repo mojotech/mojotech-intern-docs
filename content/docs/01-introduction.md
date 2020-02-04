@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-### Before we being
+### Before we begin
 
 
 > The following is a path forward to set up your development laptop. It is not **the** path. Asking your fellow mojos will offer many alternatives.
