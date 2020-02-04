@@ -7,7 +7,7 @@ title: Introduction
 
 > The following is a path forward to set up your development laptop. It is not **the** path. Asking your fellow mojos will offer many alternatives.
 >
-> Try it out. Experiment. Change what you don't like. Don't be afraid to invest time your workflow.
+> Try it out. Experiment. Change what you don't like. Don't be afraid to invest time in your workflow.
 
 
 ### Brew
