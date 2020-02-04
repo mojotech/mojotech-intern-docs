@@ -4,6 +4,21 @@ root: '/docs'
 parents: ['Mojo Time']
 ---
 
+### Speed coding challenge
+
+Competitive games exist for typing and code implementation, but there appears to be a gap for reshaping code in your editor/IDE of choice. This would present editor challenges like:
+* Switch case of vars
+* Reorder words, sentences, paragraphs
+* Advanced find/replace
+* Extract a method
+* Swap keys/values in a hash
+* Repeated steps / macros
+
+Problems:
+* IO monitoring. How do we tell if the developer is started/done?
+* Feedback. How we let the developer know there is still work to perform.
+* Recording. It would be fun to see how others solve the problem in their editor.
+
 ### Helios frontend write (sveltejs)
 
 This is an exercise in rewriting the helios frontend in sveltejs, rollup, and polka.
