@@ -17,6 +17,7 @@ Competitive games exist for typing and code implementation, but there appears to
 Problems:
 * IO monitoring. How do we tell if the developer is started/done?
 * Feedback. How we let the developer know there is still work to perform.
+* Displaying keys pressed.
 * Recording. It would be fun to see how others solve the problem in their editor.
 
 ### Helios frontend write (sveltejs)
