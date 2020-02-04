@@ -7,6 +7,7 @@
 
 <script>
   import Docs from '@sveltejs/site-kit/components/Docs.svelte'
+  import Icons from '@sveltejs/site-kit/components/Icons.svelte'
   export let sections;
 </script>
 
@@ -18,4 +19,6 @@
   <meta name="description" content="Usefull docs for mojos">
 </svelte:head>
 
-<Docs {sections} project="sapper"/>
+<Icons />
+
+<Docs {sections} owner="cbarber" project="mojodocs" path="/content" />
