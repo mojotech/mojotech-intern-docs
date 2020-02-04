@@ -4,6 +4,50 @@ root: '/docs'
 parents: ['Mojo Time']
 ---
 
+### Where's the line
+
+Description: Every year watching the super bowl, someone repeats the joke quoting some fan at a stadium asking "where's the line" for first down. This project would capture a live football game with the camera and draw in the line on the field beneath the players.
+
+Problems:
+* Detecting football players
+* Drawing a line on a field beneath players at a specific vector
+* Querying the status of the game (NFL API?)
+* Determining where the camera is looking on a field
+* Determining where in the camera FOV the line should be drawn
+
+Maybe use ML? If so, new problems:
+* Collecting data of players vs field
+* Collecting data of correctly drawn lines
+
+### Open source jamboard
+
+Description: Google jamboard but open source. Will wants to use CRDTs.
+
+Jamboard alternatives (none of them open source):
+https://www.techrepublic.com/article/google-jamboard-too-pricy-here-are-4-low-cost-virtual-whiteboard-app-alternatives/
+
+Problems:
+* Setting up a server for asynchronous communication with clients
+* Preview (Google cast display?) and Edit (laptop/tablet)
+* Dealing with CRDT network chattiness
+* Integrating with third party document/file services
+
+### Pull request CLI
+
+Description: I use my editor to view the branches of pull requests since it provides a number of benefits:
+ * View code with preferred formatting
+ * Verify code formating and functionality locally
+ * Search for code (check for orphans or errors)
+ * Prototype inline alternatves
+
+Where this breaks down is viewing and adding comments. Switching to a browser to copy/paste is tedious.
+
+Problems:
+* Consume pull requests API. github, maybe bitbucket. consolidation would be nice since I use both right now.
+* Develop a CLI format for consuming/producing comments. Maybe use a linter style output since a number of editors already support that.
+* Develop plugins for editors: vim, emacs, vscode.
+* Integration third party issue trackers (jira, pivotal, trello). Would be nice not to search/copy/paste issue numbers when branching/committing. Could be other CLI tools.
+
 ### allocate
 
 A digital product to coordinate scheduling of constrained resources. This is used to schedule which mojos are on a project and for how long.
