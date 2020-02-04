@@ -4,6 +4,14 @@ root: '/docs'
 parents: ['Mojo Time']
 ---
 
+### Helios frontend write (sveltejs)
+
+This is an exercise in rewriting the helios frontend in sveltejs, rollup, and polka.
+
+Problems:
+* Define an interface for the client (modernizr)
+* Learn how to use sveltejs, rollup, polka
+
 ### Where's the line
 
 Description: Every year watching the super bowl, someone repeats the joke quoting some fan at a stadium asking "where's the line" for first down. This project would capture a live football game with the camera and draw in the line on the field beneath the players.
