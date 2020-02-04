@@ -1,46 +1,21 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+<script context="module">
+  export async function preload() {
+    const sections = await this.fetch(`docs.json`).then(r => r.json());
+    return { sections };
+  }
+</script>
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
+<script>
+  import Docs from '@sveltejs/site-kit/components/Docs.svelte'
+  export let sections;
+</script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Mojodocs</title>
+
+  <meta name="twitter:title" content="Mojodocs">
+  <meta name="twitter:description" content="Usefull docs for mojos">
+  <meta name="description" content="Usefull docs for mojos">
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<Docs {sections} project="sapper"/>

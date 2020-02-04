@@ -1,22 +1,21 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-
-	export let segment;
+  import { stores } from '@sapper/app';
+  const { page } = stores();
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  :global(html) {
+    --prime: rgb(21, 151, 148) !important; /* TODO remove .theme-default from shared, so we don't need !important */
+  }
+  main {
+    position: relative;
+    margin: 0 auto;
+    /* padding: var(--nav-h) var(--side-nav) 0 var(--side-nav); */
+    padding: var(--nav-h) 0 0 0;
+    overflow-x: hidden;
+  }
 </style>
 
-<Nav {segment}/>
-
 <main>
-	<slot></slot>
+  <slot></slot>
 </main>
