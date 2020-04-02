@@ -4,6 +4,22 @@ root: '/docs'
 parents: ['Mojo Time']
 ---
 
+### Meeting preparation
+
+A tool to help meeting organizers and attendees better prepare for and record notes from a meeting. One of the discoveries from the PT Estimator requirements gathering is PMs are struggling to get devs to read and comment on stories before a planning meeting.
+* Provide a means to create an agenda
+* Easy to find and read meeting materials (maybe a reminder X before a meeting to review notes if you haven't)
+* Estimate how long it takes to read the materials to not have rushed meeting prep for attendees
+* Tool for taking/sharing notes from a meeting
+
+### Enroll Me for Slack
+
+Long conversation in slack are often hard to stay on top of during the work day. This tool would some how extract the relevant portions of a conversation for an enrolled user to read at a later time.
+
+### mojotech new tab homepage
+
+Browser extension that brought in like upcoming bdays, lunches for the week, holidays, who is out of the office, upcoming team meetings, how we’re tracking on goals
+
 ### Speed coding challenge
 
 Competitive games exist for typing and code implementation, but there appears to be a gap for reshaping code in your editor/IDE of choice. This would present editor challenges like:
