@@ -72,6 +72,14 @@ Problems:
 * Dealing with CRDT network chattiness
 * Integrating with third party document/file services
 
+### Web app monitor app
+
+Description: app that monitors a domain/url for a specific http response (Craig J had worked on a previous version with a former intern)
+
+### Apple two factor auth forwarded
+
+Description: What is happening right now is we have 2 factor codes that usually go to an Apple device that is logged in on another device. If that isn’t working you can text a code to the phone number on file. The issue with that is, what if the person isn’t around? So my idea is to set it up with a number that will then forward it to slack.
+
 ### Pull request CLI
 
 Description: I use my editor to view the branches of pull requests since it provides a number of benefits:
