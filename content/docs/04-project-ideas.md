@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Project Ideas
 root: '/docs'
 parents: ['Mojo Time']
 ---

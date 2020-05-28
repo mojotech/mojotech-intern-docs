@@ -99,34 +99,29 @@ brew cask install docker
 docker run hello-world
 ```
 
-### nvm
-```sh
-brew install nvm
-```
-Follow the instructions on the brew *Caveats* section (might change over time):
+### asdf
 
-Create the nvm working directory if it does not exist:
-```sh
-mkdir ~/.nvm
-```
-Add this to your `~/.bash_profile` or other shell
-configuration file (create the file if it does not exist):
-```sh
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-```
-```sh
-nvm install
-omf install https://github.com/FabioAntunes/fish-nvm
-omf install https://github.com/edc/bass
-nvm install stable
-nvm alias default stable
-```
+Version manager tool. Allows running multiple versions of language runtimes that can be controlled per project.
 
-### rvm
+https://asdf-vm.com/#/core-manage-asdf-vm
 
 ```sh
-\curl -L https://get.rvm.io | bash -s stable --autolibs=enable
+brew install asdf
+```
+
+Add the following to ~/.config/fish/config.fish:
+
+```sh
+source (brew --prefix asdf)/asdf.fish
+```
+
+Restart your terminal.
+
+```sh
+asdf plugin add elixir
+asdf install elixir 1.9.1
+asdf plugin add nodejs
+asdf install nodejs 14.3.0
 ```
 
 ### Useful Chrome Extensions

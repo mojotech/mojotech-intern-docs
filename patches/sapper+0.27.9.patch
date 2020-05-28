@@ -1,0 +1,13 @@
+diff --git a/node_modules/sapper/dist/export.js b/node_modules/sapper/dist/export.js
+index bbea70d..c1a1120 100644
+--- a/node_modules/sapper/dist/export.js
++++ b/node_modules/sapper/dist/export.js
+@@ -1811,6 +1811,8 @@ async function _export({
+ 			pathname = pathname.replace(root.pathname, '') || '/';
+ 		}
+ 
++    if (pathname.startsWith("slides")) return;
++
+ 		if (seen.has(pathname)) return;
+ 		seen.add(pathname);
+ 

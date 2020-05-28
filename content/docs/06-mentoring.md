@@ -2,6 +2,10 @@
 title: Mentoring
 ---
 
+### Slides
+
+ * [2020 Internship Kickoff](/slides/2020-internship.html)
+
 ### What we have
 
  * 8 week planned internship starting June 1.
@@ -26,6 +30,7 @@ title: Mentoring
     * how to research a new topic
     * how to ask good questions
     * how to know you're stuck
+    * how to pair program
  * Mentor stand up. Optional so don't feel obligated to join it unless you want to share or hear what is being worked on (cognizant that everyone is busy).
  * Pair programming. https://tuple.app/ but its Mac only :(
 
