@@ -2,6 +2,10 @@
 title: Mentoring
 ---
 
+### Slides
+
+ * [2020 Internship Kickoff](/slides/2020-internship.html)
+
 ### What we have
 
  * 8 week planned internship starting June 1.
