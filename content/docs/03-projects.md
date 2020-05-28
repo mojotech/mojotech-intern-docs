@@ -1,13 +1,12 @@
 ---
-title: Helios
+title: Projects
 root: '/docs'
 parents: ['Get Started']
 ---
 
+### Helios
 
 Helios is our weather/welcome display for the Providence and Boulder front door. It serves as an opportunity to welcome guests and show off some our technical expertise.
-
-### Stack
 
 * Front-end
   * react: https://reactjs.org/
