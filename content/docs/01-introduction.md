@@ -125,6 +125,12 @@ asdf install nodejs 14.3.0
 asdf plugin add yarn
 asdf install yarn 1.22.4
 ```
+
+You can also install the appropriate versions if the project has a `.tool-versions` file.
+
+```sh
+cd some-project
+asdf install
 ```
 
 ### Useful Chrome Extensions
