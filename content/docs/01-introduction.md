@@ -16,7 +16,7 @@ Brew is package manager for mac osx. https://brew.sh/
 
 ```sh
 xcode-select --install
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ### iTerm2
