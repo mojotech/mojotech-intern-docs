@@ -5,8 +5,19 @@
 ## Schedule
 
 * Kickoff
-* 2 weeks orientation
+* 1 week orientation
+* 1 week StandupHub intro
 * 6 weeks project work
+
+---
+
+## Goals
+
+* Learn how to:
+  * write well formed PRs
+  * review PRs
+  * work with a team
+* The focus is learning and the programming work is a means to an end. Dive deep into topics when researching
 
 ---
 
@@ -62,20 +73,31 @@
 
 ## Orientation
 
-* Writing and reviewing good PRs
 * [The missing semester](https://missing.csail.mit.edu/)
+  * Review the first five chapters
+  * Ask *lots* of questions
 * Tool setup
   * Checkout [mojodocs](https://mojodocs.netlify.com)
   * Ask fellow mojos! #internship #engineering
+* Reviewing StandupHub PRs
 * Mentor pair programming
-* Standup Hub bug fixes
+* Make your first PR
 
 ---
+
+## StandupHub intro
+
+* Standup Hub bug fixes
+* Standup Hub features
+* Each PR reviewed by one other intern and one mentor
+
+---
+
 
 ## Project work
 
 * Standup Hub v1 milestone
- * Elixir API parity
+ * Elixir/Phoenix API parity
  * New design
  * Github integration
  * Slack integation 
