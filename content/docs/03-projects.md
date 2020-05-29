@@ -24,6 +24,19 @@ parents: ['Get Started']
   * https://github.com/mojotech/standup-api
 * docker: https://www.docker.com/
 
+#### Startup
+
+```sh
+cd standuphub-api-ex
+# start a pgsl instance on localhost:5432. You can use an OS service instead of docker
+docker-compose up db
+# start the phoenix server on localhost:4000 connected to localhost for database
+mix phx.server
+cd ../standuphub-web
+# start webpack server on localhost:3000 pointed to the local phoenix server the API server
+REACT_APP_API_SERVER=http://localhost:4000 yarn start
+```
+
 ### Helios
 
 Helios is our weather/welcome display for the Providence and Boulder front door. It serves as an opportunity to welcome guests and show off some our technical expertise.
