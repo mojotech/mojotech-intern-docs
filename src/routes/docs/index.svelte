@@ -21,4 +21,4 @@
 
 <Icons />
 
-<Docs {sections} owner="cbarber" project="mojodocs" path="/content" />
+<Docs {sections} owner="mojotech" project="mojotech-intern-docs" path="/content" />
