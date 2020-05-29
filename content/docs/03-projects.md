@@ -8,6 +8,8 @@ parents: ['Get Started']
 
 [StandupHub](https://www.standuphub.com/) is a web service to easily track your tasks and their statuses for standup.
 
+#### Stack
+
 * PT issues: https://www.pivotaltracker.com/n/projects/1553257
 * Slack: #standuphub
 * Front-end
