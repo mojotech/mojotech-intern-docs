@@ -16,7 +16,7 @@ Brew is package manager for mac osx. https://brew.sh/
 
 ```sh
 xcode-select --install
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ### iTerm2
@@ -82,17 +82,13 @@ cat ~/.ssh/id_rsa.pub | pbcopy
 pbcopy will copy STDOUT into your clipboard. You can then paste into your account ssh key on github.com.
 
 ### docker
-```sh
-brew cask install docker
-```
 
-* Launch Docker.
- * Press Command + Space to bring up Spotlight Search and enter Docker to launch Docker.
- * In the Docker needs privileged access dialog box, click OK.
- * Enter password and click OK.
+https://hub.docker.com/editions/community/docker-ce-desktop-mac/
 
- * When Docker is launched in this manner, a Docker whale icon appears in the status menu. As soon as the whale icon appears, the symbolic links for docker, docker-compose, docker-credential-osxkeychain and docker-machine are created in /usr/local/bin.
+https://download.docker.com/mac/stable/Docker.dmg
 
+* Install the dmg image.
+ * A Docker whale icon appears in the status menu. As soon as the whale icon appears, the symbolic links for docker, docker-compose, docker-credential-osxkeychain and docker-machine are created in /usr/local/bin.
 * Test docker
 
 ```sh
