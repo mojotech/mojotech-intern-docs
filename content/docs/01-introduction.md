@@ -82,11 +82,18 @@ Relogging should present a new shell status line for the current working directo
 
 ### fzf
 
+https://github.com/junegunn/fzf
+
 fzf is a fuzzy file finder with shell integration (CTRL-T, CTRL-R, and ALT-C)
 ```sh
 brew install fzf
 /usr/local/opt/fzf/install
 ```
+
+The shell integration commands should present the fuzzy finder for:
+* files: CTRL-T
+* shell history: CTRL-R
+* cd directory: ALT-C
 
 ### git
 ```sh
