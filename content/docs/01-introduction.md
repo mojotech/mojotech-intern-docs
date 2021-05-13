@@ -150,6 +150,13 @@ cd helios2 # or whether helios2 is checked out for you
 asdf install
 ```
 
+If `asdf install` fails, you are likely missing some system dependencies. The asdf output will likely include instructions to install them like:
+```sh
+The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `apt-get install -y libreadline-dev` to fetch missing dependencies.
+```
+
 ### Useful Chrome Extensions
 
 React Dev Tools
