@@ -138,18 +138,15 @@ brew install asdf
 Restart your terminal.
 
 ```sh
-asdf plugin add elixir
-asdf install elixir 1.9.1
+asdf plugin add ruby
 asdf plugin add nodejs
-asdf install nodejs 14.3.0
 asdf plugin add yarn
-asdf install yarn 1.22.4
 ```
 
 You can also install the appropriate versions if the project has a `.tool-versions` file.
 
 ```sh
-cd some-project
+cd helios2 # or whether helios2 is checked out for you
 asdf install
 ```
 
