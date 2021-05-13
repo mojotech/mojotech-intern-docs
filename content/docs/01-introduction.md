@@ -9,6 +9,13 @@ title: Introduction
 >
 > Try it out. Experiment. Change what you don't like. Don't be afraid to invest time in your workflow.
 
+Make sure you're connected to the following services before you begin:
+* Mojotech GSuite
+* Mojotech Slack
+* BambooHR (use gauth)
+* PivotalTracker (use gauth)
+* Zeplin (use gauth)
+
 
 ### Brew
 
