@@ -16,8 +16,9 @@ Make sure you're connected to the following services before you begin:
 * PivotalTracker (use gauth)
 * Zeplin (use gauth)
 
+These examples assume osx. Linux users will have to use a different package manager and find the corresponding names for packages e.g. - `apt install python3-pip`. Linux users should skip the brew, iTerm2, and bash steps.
 
-### Brew
+### Brew (osx only)
 
 Brew is package manager for mac osx. https://brew.sh/
 
@@ -26,14 +27,14 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### iTerm2
+### iTerm2 (osx only)
 
 Terminal replacement for mac os x. https://www.iterm2.com
 ```sh
 brew cask install iterm2
 ```
 
-### Bash
+### Bash (osx only)
 
 The missing semester uses bash for its examples. A number of open source projects also assume bash for examples. If you have a preferred shell already, use that and disregard the bash related steps.
 
@@ -66,7 +67,7 @@ mv powerline-go-darwin-amd64 powerline-go
 chmod +x powerline-go
 ```
 
-Append the following to `~/.profile`:
+Append the following to `~/.profile` (`~/.bashrc` on linux):
 ```sh
 function _update_ps1() {
     PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l))"
