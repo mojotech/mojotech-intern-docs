@@ -26,36 +26,51 @@ Terminal replacement for mac os x. https://www.iterm2.com
 brew cask install iterm2
 ```
 
+### Bash
+
+The missing semester uses bash for its examples. A number of open source projects also assume bash for examples. If you have a preferred shell already, use that and disregard the bash related steps.
+
+```sh
+chsh - s /bin/bash
+```
+
+Set your default shell to bash in iterm2:
+ * open Preferences
+ * change the command on General tab on your default profile
+ * enter /usr/local/bin/bash for the shell path
+
+Opening iterm2 should now display the bash shell prompt
+
 ### Powerline fonts
 
 * Download and install a patched powerline font from: https://github.com/powerline/fonts
 * Select font from iTerm2
 
-### Shell
+### Improved bash status line
 
-Bash is a little lackluster and switching to fish/zsh can greatly improve functionality. fish is a pretty easy shell to start with.  https://fishshell.com/
+The default bash status line does not offer much information about your current environment. This installs powerline-go to provide git status information directly in the shell status. If you have a different preferred powerline-like tool, use that instead. Configuration options for powerline-go can be found here:
+https://github.com/justjanne/powerline-go#customization
+
 ```sh
-brew install fish
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh - s /usr/local/bin/fish
+mkdir -p ~/bin/
+cd ~/bin/
+wget https://github.com/justjanne/powerline-go/releases/download/v1.21.0/powerline-go-darwin-amd64
+mv powerline-go-darwin-amd64 powerline-go
+chmod +x powerline-go
 ```
 
-#### oh-my-fish
+Append the following to `~/.profile`:
 ```sh
-curl -L https://get.oh-my.fish | fish
+function _update_ps1() {
+    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l))"
+}
+
+if [ "$TERM" != "linux" ] && [ -f "$HOME/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 ```
 
-Set your default shell to fish in iterm2:
- * open Preferences
- * change the command on General tab on your default profile
- * enter /usr/local/bin/fish for the shell path
-
-Opening iterm2 should now display the fish shell prompt
-
-#### bob-the-fish
-```sh
-omf install bobthefish
-```
+Relogging should present a new shell status line for the current working directory and git status if you are in a git directory.
 
 ### fzf
 
@@ -103,12 +118,6 @@ https://asdf-vm.com/#/core-manage-asdf-vm
 
 ```sh
 brew install asdf
-```
-
-Add the following to ~/.config/fish/config.fish:
-
-```sh
-source (brew --prefix asdf)/asdf.fish
 ```
 
 Restart your terminal.
