@@ -51,6 +51,8 @@ Opening iterm2 should now display the bash shell prompt
 
 ### Powerline fonts
 
+These are patched fonts for the powerline shell status line.
+
 * Download and install a patched powerline font from: https://github.com/powerline/fonts
 * Select font from iTerm2
 
