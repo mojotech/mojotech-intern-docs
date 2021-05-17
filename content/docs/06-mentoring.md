@@ -9,20 +9,20 @@ title: Mentoring
 
 ### What we have
 
- * 8 week planned internship starting June 1.
-  * This will likely mean there is not enough time for an usefull onboard onto helios
-  * 2 weeks onboarding onto main project
-  * 6 weeks sprints on main project
+ * 12 week planned internship starting May 17th
+  * 4 weeks onboarding onto helios
+  * 8 weeks sprints on main project
  * Slack channel for intern help and discussion, #internship. Mentors can be added/removed from @help-interns group to be pinged for help versus passively watching.
  * Markdown docs on netlify. You're looking at it. These cover basic set up, helios, and project ideas. Submit PRs on github.
- * White boarding with video conf through limnu.com. Ping @craigb, @thedelchop, or @gerald to be added.
- * ~~An introductory project for full stack web dev, helios.~~ Likely not enough time.
- * A main project for the intern team, unnamed meeting prep tool.
+ * An introductory project for full stack web dev, helios.
+ * Pairing onto a client project
+  * Systra
+  * United Way
  * https://missing.csail.mit.edu/ is a great starting point for onboarding
 
 ### What we are planning
 
- * Daily meetup for checkin, code review, or concept discussion. Ideally one of these a week would introduce a new topic (git rebasing, functional programming, shell tooling, RDBMS, etc). The rest could be informal to discuss / share or just chat socially. Hallway may work this.
+ * Standups for checkin, code review, or concept discussion. Ideally one of these a week would introduce a new topic (git rebasing, functional programming, shell tooling, RDBMS, etc). The rest could be informal to discuss / share or just chat socially. Hallway may work this.
   * git intro
   * git rebasing intro
   * how to review PRs
@@ -33,7 +33,7 @@ title: Mentoring
     * how to know you're stuck
     * how to pair program
  * Mentor stand up. Optional so don't feel obligated to join it unless you want to share or hear what is being worked on (cognizant that everyone is busy).
- * Pair programming. https://tuple.app/ but its Mac only :(
+ * Pair programming. LiveShare in Visual Code
 
 ### How you can help
 
