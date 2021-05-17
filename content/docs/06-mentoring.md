@@ -49,10 +49,6 @@ title: Mentoring
 
    We noticed the interns from previous years were hesitant to post in #engineering and their own channel seemed to help team cohesion.
 
- * Why limnu when slack already supports drawing on a screen share?
-
-   The limnu white board is persistent (potentially reusuable between years), collaborative (multiple users can draw simultaneously), and offers more functionality. Slack screen share may still be good enough for pair programming.
-
  * Why write these docs in a custom svelte app?
 
    ¯\_(ツ)_/¯
