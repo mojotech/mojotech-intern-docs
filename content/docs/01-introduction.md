@@ -9,8 +9,16 @@ title: Introduction
 >
 > Try it out. Experiment. Change what you don't like. Don't be afraid to invest time in your workflow.
 
+Make sure you're connected to the following services before you begin:
+* Mojotech GSuite
+* Mojotech Slack
+* BambooHR (use gauth)
+* PivotalTracker (use gauth)
+* Zeplin (use gauth)
 
-### Brew
+These examples assume osx. Linux users will have to use a different package manager and find the corresponding names for packages e.g. - `apt install python3-pip`. Linux users should skip the brew, iTerm2, and bash steps.
+
+### Brew (osx only)
 
 Brew is package manager for mac osx. https://brew.sh/
 
@@ -19,51 +27,75 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### iTerm2
+### iTerm2 (osx only)
 
 Terminal replacement for mac os x. https://www.iterm2.com
 ```sh
 brew cask install iterm2
 ```
 
+### Bash (osx only)
+
+The missing semester uses bash for its examples. A number of open source projects also assume bash for examples. If you have a preferred shell already, use that and disregard the bash related steps.
+
+```sh
+chsh - s /bin/bash
+```
+
+Set your default shell to bash in iterm2:
+ * open Preferences
+ * change the command on General tab on your default profile
+ * enter /usr/local/bin/bash for the shell path
+
+Opening iterm2 should now display the bash shell prompt
+
 ### Powerline fonts
+
+These are patched fonts for the powerline shell status line.
 
 * Download and install a patched powerline font from: https://github.com/powerline/fonts
 * Select font from iTerm2
 
-### Shell
+### Improved bash status line
 
-Bash is a little lackluster and switching to fish/zsh can greatly improve functionality. fish is a pretty easy shell to start with.  https://fishshell.com/
+The default bash status line does not offer much information about your current environment. This installs powerline-go to provide git status information directly in the shell status. If you have a different preferred powerline-like tool, use that instead. Configuration options for powerline-go can be found here:
+https://github.com/justjanne/powerline-go#customization
+
 ```sh
-brew install fish
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh - s /usr/local/bin/fish
+mkdir -p ~/bin/
+cd ~/bin/
+wget https://github.com/justjanne/powerline-go/releases/download/v1.21.0/powerline-go-darwin-amd64
+mv powerline-go-darwin-amd64 powerline-go
+chmod +x powerline-go
 ```
 
-#### oh-my-fish
+Append the following to `~/.profile` (`~/.bashrc` on linux):
 ```sh
-curl -L https://get.oh-my.fish | fish
+function _update_ps1() {
+    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l))"
+}
+
+if [ "$TERM" != "linux" ] && [ -f "$HOME/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 ```
 
-Set your default shell to fish in iterm2:
- * open Preferences
- * change the command on General tab on your default profile
- * enter /usr/local/bin/fish for the shell path
-
-Opening iterm2 should now display the fish shell prompt
-
-#### bob-the-fish
-```sh
-omf install bobthefish
-```
+Relogging should present a new shell status line for the current working directory and git status if you are in a git directory.
 
 ### fzf
+
+https://github.com/junegunn/fzf
 
 fzf is a fuzzy file finder with shell integration (CTRL-T, CTRL-R, and ALT-C)
 ```sh
 brew install fzf
 /usr/local/opt/fzf/install
 ```
+
+The shell integration commands should present the fuzzy finder for:
+* files: CTRL-T
+* shell history: CTRL-R
+* cd directory: ALT-C
 
 ### git
 ```sh
@@ -105,28 +137,26 @@ https://asdf-vm.com/#/core-manage-asdf-vm
 brew install asdf
 ```
 
-Add the following to ~/.config/fish/config.fish:
-
-```sh
-source (brew --prefix asdf)/asdf.fish
-```
-
 Restart your terminal.
 
 ```sh
-asdf plugin add elixir
-asdf install elixir 1.9.1
+asdf plugin add ruby
 asdf plugin add nodejs
-asdf install nodejs 14.3.0
 asdf plugin add yarn
-asdf install yarn 1.22.4
 ```
 
 You can also install the appropriate versions if the project has a `.tool-versions` file.
 
 ```sh
-cd some-project
+cd helios2 # or whether helios2 is checked out for you
 asdf install
+```
+
+If `asdf install` fails, you are likely missing some system dependencies. The asdf output will likely include instructions to install them like:
+```sh
+The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `apt-get install -y libreadline-dev` to fetch missing dependencies.
 ```
 
 ### Useful Chrome Extensions
