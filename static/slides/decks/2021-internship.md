@@ -74,11 +74,13 @@
 ## Orientation
 
 * [The missing semester](https://missing.csail.mit.edu/)
-  * Review the first five chapters
+  * Review the first six chapters
+  * Command-line Environment and Version Control (Git) will be really helpful
   * Ask *lots* of questions
 * Tool setup
   * Checkout [mojodocs](https://mojodocs.netlify.com)
   * Ask fellow mojos! #internship #engineering
+* [Mojotech Git Workflow](https://www.mojotech.com/blog/mojotech-git-workflow/)
 * Reviewing Helios PRs
 * Mentor pair programming
 * Make your first PR
