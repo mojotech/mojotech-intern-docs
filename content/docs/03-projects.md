@@ -19,7 +19,7 @@ Helios is our weather/welcome display for the Providence and Boulder front door.
   * postgresql: https://www.postgresql.org/
   * redis: https://redis.io/
 * APIs
-  * https://darksky.net/
+  * https://openweathermap.org/api
   * https://github.com/
   * https://slack.com/
   * https://twitter.com/
