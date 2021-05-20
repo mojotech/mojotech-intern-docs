@@ -39,7 +39,7 @@ brew cask install iterm2
 The missing semester uses bash for its examples. A number of open source projects also assume bash for examples. If you have a preferred shell already, use that and disregard the bash related steps.
 
 ```sh
-chsh - s /bin/bash
+chsh -s /bin/bash
 ```
 
 Set your default shell to bash in iterm2:
