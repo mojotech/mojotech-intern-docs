@@ -31,7 +31,7 @@ xcode-select --install
 
 Terminal replacement for mac os x. https://www.iterm2.com
 ```sh
-brew cask install iterm2
+brew --cask install iterm2
 ```
 
 ### Bash (osx only)
