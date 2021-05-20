@@ -31,7 +31,7 @@ xcode-select --install
 
 Terminal replacement for mac os x. https://www.iterm2.com
 ```sh
-brew --cask install iterm2
+brew install --cask iterm2
 ```
 
 ### Bash (osx only)
@@ -65,13 +65,31 @@ Start by running this to install the [starship statusline](https://starship.rs/)
 brew install starship
 ```
 
+
 After that finishes, append the following to the end of your `~/.bash_profile` (`~/.bashrc` on linux):
 ```sh
 eval "$(starship init bash)"
 ```
+
+If you're on linux or dont have access to brew, you can run this command
+```sh
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+```
+
+other install methods can be found [here](https://starship.rs/guide/#%F0%9F%9A%80-installation)
 You can run `starship --help` to get a quick overview of the statusline functionality or visit the website for more in-depth docs.
 
-The final step to setting up your terminal statusline is to install a [NerdFont](https://www.nerdfonts.com/font-downloads). This step is technically optional, your statusline will function without it, but having a NerdFont installed will allow you to see helpful icons.
+The final step to set up your new statusline is to get a font with support for
+icons, these are called NerdFonts, installing them is simple:
+
+```sh
+brew tap homebrew/cask-fonts
+brew install --cask font-blex-mono-nerd-font
+```
+
+if you are on linux or dont have access to brew, you can download the font
+directly [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip). Once downloaded, open the unzip the package, select all of the `.otf` files and double click them. This will launch the installation prompt.
+
 Once you finish downloading and installing your NerdFont, use it by opening your iTerm preferences, going to the `Profile` section, and selecting the `Text` tab.
 
 Relogging should present a new shell statusline for the current working directory and git status if you are in a git directory.
