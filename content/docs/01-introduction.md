@@ -57,30 +57,24 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 ```
 
 ### Improved bash status line
+The default statusline for `bash` is far from helpful. We can remedy that quickly by following a few simple steps.
 
-The default bash status line does not offer much information about your current environment. This installs powerline-go to provide git status information directly in the shell status. If you have a different preferred powerline-like tool, use that instead. Configuration options for powerline-go can be found here:
-https://github.com/justjanne/powerline-go#customization
+Start by running this to install the [starship statusline](https://starship.rs/):
 
 ```sh
-mkdir -p ~/bin/
-cd ~/bin/
-wget https://github.com/justjanne/powerline-go/releases/download/v1.21.0/powerline-go-darwin-amd64
-mv powerline-go-darwin-amd64 powerline-go
-chmod +x powerline-go
+brew install starship
 ```
 
-Append the following to `~/.profile` (`~/.bashrc` on linux):
+After that finishes, append the following to the end of your `~/.bash_profile` (`~/.bashrc` on linux):
 ```sh
-function _update_ps1() {
-    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l))"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$HOME/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+eval "$(starship init bash)"
 ```
+You can run `starship --help` to get a quick overview of the statusline functionality or visit the website for more in-depth docs.
 
-Relogging should present a new shell status line for the current working directory and git status if you are in a git directory.
+The final step to setting up your terminal statusline is to install a [NerdFont](https://www.nerdfonts.com/font-downloads). This step is technically optional, your statusline will function without it, but having a NerdFont installed will allow you to see helpful icons.
+Once you finish downloading and installing your NerdFont, use it by opening your iTerm preferences, going to the `Profile` section, and selecting the `Text` tab.
+
+Relogging should present a new shell statusline for the current working directory and git status if you are in a git directory.
 
 ### fzf
 
