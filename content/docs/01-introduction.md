@@ -42,19 +42,19 @@ The missing semester uses bash for its examples. A number of open source project
 chsh -s /bin/bash
 ```
 
-Set your default shell to bash in iterm2:
- * open Preferences
- * change the command on General tab on your default profile
- * enter /usr/local/bin/bash for the shell path
+Opening iterm2 should now display the bash shell prompt. You can check that this is working correctly by entering this command:
 
-Opening iterm2 should now display the bash shell prompt
+```sh
+echo $SHELL
+```
+It should return `/bin/bash`.
 
-### Powerline fonts
+if you see a message that says `The default interactive shell is now zsh.`, you can surpress it by adding this line to your `~/.bash_profile` file:
 
-These are patched fonts for the powerline shell status line.
 
-* Download and install a patched powerline font from: https://github.com/powerline/fonts
-* Select font from iTerm2
+```sh
+export BASH_SILENCE_DEPRECATION_WARNING=1
+```
 
 ### Improved bash status line
 
