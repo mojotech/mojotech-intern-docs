@@ -20,7 +20,7 @@
     "patch-package": "^6.2.2",
     "polka": "next",
     "postinstall-postinstall": "^2.1.0",
-    "prismjs": "^1.24.0",
+    "prismjs": "^1.25.0",
     "sirv": "^0.4.0"
   },
   "devDependencies": {
