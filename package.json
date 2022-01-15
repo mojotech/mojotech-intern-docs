@@ -16,7 +16,7 @@
     "@polka/send": "^0.4.0",
     "@sveltejs/site-kit": "^1.1.4",
     "compression": "^1.7.1",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "patch-package": "^6.2.2",
     "polka": "next",
     "postinstall-postinstall": "^2.1.0",
