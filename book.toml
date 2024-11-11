@@ -1,0 +1,10 @@
+[book]
+authors = ["Craig Barber"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+additional-css = ["./theme/catppuccin.css", "./theme/catppuccin-admonish.css"]
+default-theme = "latte"
+preferred-dark-theme = "macchiato"
