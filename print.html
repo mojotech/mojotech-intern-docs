@@ -1,0 +1,1070 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js latte">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="./theme/catppuccin.css">
+                <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "latte";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('latte')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="02-editors.html"><strong aria-hidden="true">2.</strong> Editors</a></li><li class="chapter-item expanded "><a href="03-projects.html"><strong aria-hidden="true">3.</strong> Projects</a></li><li class="chapter-item expanded "><a href="04-project-ideas.html"><strong aria-hidden="true">4.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="05-internship-interviews.html"><strong aria-hidden="true">5.</strong> Internship Interviews</a></li><li class="chapter-item expanded "><a href="06-mentoring.html"><strong aria-hidden="true">6.</strong> Mentoring</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="decks/2020-internship.html"><strong aria-hidden="true">6.1.</strong> 2020 Internship Kickoff</a></li><li class="chapter-item expanded "><a href="decks/2021-internship.html"><strong aria-hidden="true">6.2.</strong> 2021 Internship Kickoff</a></li><li class="chapter-item expanded "><a href="decks/2022-internship.html"><strong aria-hidden="true">6.3.</strong> 2022 Internship Kickoff</a></li></ol></li><li class="chapter-item expanded "><a href="07-git-cheats.html"><strong aria-hidden="true">7.</strong> Git Cheats</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<h3 id="before-we-begin"><a class="header" href="#before-we-begin">Before we begin</a></h3>
+<blockquote>
+<p>The following is a path forward to set up your development laptop. It is not <strong>the</strong> path. Asking your fellow mojos will offer many alternatives.</p>
+<p>Try it out. Experiment. Change what you don't like. Don't be afraid to invest time in your workflow.</p>
+</blockquote>
+<p>Make sure you're connected to the following services before you begin:</p>
+<ul>
+<li>Mojotech GSuite</li>
+<li>Mojotech Slack</li>
+<li>BambooHR (use gauth)</li>
+<li>PivotalTracker (use gauth)</li>
+<li>Zeplin (use gauth)</li>
+</ul>
+<p>These examples assume osx. Linux users will have to use a different package manager and find the corresponding names for packages e.g. - <code>apt install python3-pip</code>. Linux users should skip the brew, iTerm2, and bash steps.</p>
+<h3 id="brew-osx-only"><a class="header" href="#brew-osx-only">Brew (osx only)</a></h3>
+<p>Brew is package manager for mac osx. https://brew.sh/</p>
+<pre><code class="language-sh">xcode-select --install
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre>
+<h3 id="iterm2-osx-only"><a class="header" href="#iterm2-osx-only">iTerm2 (osx only)</a></h3>
+<p>Terminal replacement for mac os x. https://www.iterm2.com</p>
+<pre><code class="language-sh">brew install --cask iterm2
+</code></pre>
+<h3 id="bash-osx-only"><a class="header" href="#bash-osx-only">Bash (osx only)</a></h3>
+<p>The missing semester uses bash for its examples. A number of open source projects also assume bash for examples. If you have a preferred shell already, use that and disregard the bash related steps.</p>
+<pre><code class="language-sh">chsh -s /bin/bash
+</code></pre>
+<p>Opening iterm2 should now display the bash shell prompt. You can check that this is working correctly by entering this command:</p>
+<pre><code class="language-sh">echo $SHELL
+</code></pre>
+<p>It should return <code>/bin/bash</code>.</p>
+<p>if you see a message that says <code>The default interactive shell is now zsh.</code>, you can surpress it by adding this line to your <code>~/.bash_profile</code> file:</p>
+<pre><code class="language-sh">export BASH_SILENCE_DEPRECATION_WARNING=1
+</code></pre>
+<h3 id="improved-bash-status-line"><a class="header" href="#improved-bash-status-line">Improved bash status line</a></h3>
+<p>The default statusline for <code>bash</code> is far from helpful. We can remedy that quickly by following a few simple steps.</p>
+<p>Start by running this to install the <a href="https://starship.rs/">starship statusline</a>:</p>
+<pre><code class="language-sh">brew install starship
+</code></pre>
+<p>After that finishes, append the following to the end of your <code>~/.bash_profile</code> (<code>~/.bashrc</code> on linux):</p>
+<pre><code class="language-sh">eval &quot;$(starship init bash)&quot;
+</code></pre>
+<p>If you're on linux or dont have access to brew, you can run this command</p>
+<pre><code class="language-sh">sh -c &quot;$(curl -fsSL https://starship.rs/install.sh)&quot;
+</code></pre>
+<p>other install methods can be found <a href="https://starship.rs/guide/#%F0%9F%9A%80-installation">here</a>
+You can run <code>starship --help</code> to get a quick overview of the statusline functionality or visit the website for more in-depth docs.</p>
+<p>The final step to set up your new statusline is to get a font with support for
+icons, these are called NerdFonts, installing them is simple:</p>
+<pre><code class="language-sh">brew tap homebrew/cask-fonts
+brew install --cask font-blex-mono-nerd-font
+</code></pre>
+<p>if you are on linux or dont have access to brew, you can download the font
+directly <a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip">here</a>. Once downloaded, open the unzip the package, select all of the <code>.otf</code> files and double click them. This will launch the installation prompt.</p>
+<p>Once you finish downloading and installing your NerdFont, use it by opening your iTerm preferences, going to the <code>Profile</code> section, and selecting the <code>Text</code> tab.</p>
+<p>Relogging should present a new shell statusline for the current working directory and git status if you are in a git directory.</p>
+<h3 id="fzf"><a class="header" href="#fzf">fzf</a></h3>
+<p>https://github.com/junegunn/fzf</p>
+<p>fzf is a fuzzy file finder with shell integration (CTRL-T, CTRL-R, and ALT-C)</p>
+<pre><code class="language-sh">brew install fzf
+/usr/local/opt/fzf/install
+</code></pre>
+<p>The shell integration commands should present the fuzzy finder for:</p>
+<ul>
+<li>files: CTRL-T</li>
+<li>shell history: CTRL-R</li>
+<li>cd directory: ALT-C</li>
+</ul>
+<h3 id="git"><a class="header" href="#git">git</a></h3>
+<pre><code class="language-sh">brew install git
+</code></pre>
+<p>Send your github handle to @craig (Craig Jolicoeur) on slack.</p>
+<p>Set up your ssh key for authentication</p>
+<pre><code class="language-sh">ssh-keygen -t rsa -b 4096
+cat ~/.ssh/id_rsa.pub | pbcopy
+</code></pre>
+<p>pbcopy will copy STDOUT into your clipboard. You can then paste into your account ssh key on github.com.</p>
+<h3 id="docker"><a class="header" href="#docker">docker</a></h3>
+<p>https://hub.docker.com/editions/community/docker-ce-desktop-mac/</p>
+<p>https://download.docker.com/mac/stable/Docker.dmg</p>
+<ul>
+<li>Install the dmg image.</li>
+<li>A Docker whale icon appears in the status menu. As soon as the whale icon appears, the symbolic links for docker, docker-compose, docker-credential-osxkeychain and docker-machine are created in /usr/local/bin.</li>
+<li>Test docker</li>
+</ul>
+<pre><code class="language-sh">docker run hello-world
+</code></pre>
+<h3 id="asdf"><a class="header" href="#asdf">asdf</a></h3>
+<p>Version manager tool. Allows running multiple versions of language runtimes that can be controlled per project.</p>
+<p>https://asdf-vm.com/#/core-manage-asdf-vm</p>
+<pre><code class="language-sh">brew install asdf
+</code></pre>
+<p>Restart your terminal.</p>
+<pre><code class="language-sh">asdf plugin add ruby
+asdf plugin add nodejs
+asdf plugin add yarn
+</code></pre>
+<p>You can also install the appropriate versions if the project has a <code>.tool-versions</code> file.</p>
+<pre><code class="language-sh">cd helios2 # or whether helios2 is checked out for you
+asdf install
+</code></pre>
+<p>If <code>asdf install</code> fails, you are likely missing some system dependencies. The asdf output will likely include instructions to install them like:</p>
+<pre><code class="language-sh">The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `apt-get install -y libreadline-dev` to fetch missing dependencies.
+</code></pre>
+<h3 id="useful-chrome-extensions"><a class="header" href="#useful-chrome-extensions">Useful Chrome Extensions</a></h3>
+<p>React Dev Tools</p>
+<p>Inspect the react components in the browser similiar to the element inspector</p>
+<p>https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en</p>
+<p>Apollo Client Developer Tools</p>
+<p>Inspect and run graphql queries</p>
+<p>https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="editors"><a class="header" href="#editors">Editors</a></h1>
+<p>Common editors and recommended plugins</p>
+<h3 id="visual-code"><a class="header" href="#visual-code">Visual Code</a></h3>
+<p>https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby</p>
+<p>https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint</p>
+<p>https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode</p>
+<p>https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare</p>
+<h4 id="resources"><a class="header" href="#resources">Resources</a></h4>
+<ul>
+<li><a href="/keyboard-shortcuts-macos.png">Keyboard shortcuts for macOS</a></li>
+<li><a href="/keyboard-shortcuts-windows.png">Keyboard shortcuts for Windows</a></li>
+<li><a href="/keyboard-shortcuts-linux.png">Keyboard shortcuts for Linux</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="projects"><a class="header" href="#projects">Projects</a></h1>
+<h3 id="helios"><a class="header" href="#helios">Helios</a></h3>
+<p>Helios is our weather/welcome display for the Providence and Boulder front door. It serves as an opportunity to welcome guests and show off some our technical expertise.</p>
+<ul>
+<li>Front-end
+<ul>
+<li>react: https://reactjs.org/</li>
+<li>apollo client: https://www.apollographql.com/docs/react/</li>
+<li>ramdajs: https://ramdajs.com/</li>
+<li>matter.js: http://brm.io/matter-js/</li>
+</ul>
+</li>
+<li>Back-end
+<ul>
+<li>ruby on rails: https://rubyonrails.org/</li>
+<li>graphql-ruby: https://github.com/rmosolgo/graphql-ruby</li>
+<li>postgresql: https://www.postgresql.org/</li>
+<li>redis: https://redis.io/</li>
+</ul>
+</li>
+<li>APIs
+<ul>
+<li>https://openweathermap.org/api</li>
+<li>https://github.com/</li>
+<li>https://slack.com/</li>
+<li>https://twitter.com/</li>
+</ul>
+</li>
+<li>graphql: https://graphql.org/</li>
+<li>docker: https://www.docker.com/</li>
+</ul>
+<h3 id="standuphub"><a class="header" href="#standuphub">StandupHub</a></h3>
+<p><a href="https://www.standuphub.com/">StandupHub</a> is a web service to easily track your tasks and their statuses for standup.</p>
+<h4 id="stack"><a class="header" href="#stack">Stack</a></h4>
+<ul>
+<li>PT issues: https://www.pivotaltracker.com/n/projects/1553257</li>
+<li>Slack: #standuphub</li>
+<li>Front-end
+<ul>
+<li>github: https://github.com/mojotech/standup-web</li>
+<li>react 16: https://reactjs.org/</li>
+<li>redux: https://redux.js.org/</li>
+</ul>
+</li>
+<li>Back-end
+<ul>
+<li>github: https://github.com/mojotech/standup-api-ex</li>
+<li>Phoenix: https://www.phoenixframework.org/</li>
+<li>Elixir: https://elixir-lang.org/</li>
+</ul>
+</li>
+<li>Back-end (legacy)
+<ul>
+<li>https://github.com/mojotech/standup-api</li>
+</ul>
+</li>
+<li>docker: https://www.docker.com/</li>
+</ul>
+<h4 id="startup"><a class="header" href="#startup">Startup</a></h4>
+<pre><code class="language-sh">cd standuphub-api-ex
+# start a pgsl instance on localhost:5432. You can use an OS service instead of docker
+docker-compose up db
+# start the phoenix server on localhost:4000 connected to localhost for database
+mix phx.server
+cd ../standuphub-web
+# start webpack server on localhost:3000 pointed to the local phoenix server the API server
+REACT_APP_API_SERVER=http://localhost:4000 yarn start
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="project-ideas"><a class="header" href="#project-ideas">Project Ideas</a></h1>
+<h3 id="meeting-preparation"><a class="header" href="#meeting-preparation">Meeting preparation</a></h3>
+<p>A tool to help meeting organizers and attendees better prepare for and record notes from a meeting. One of the discoveries from the PT Estimator requirements gathering is PMs are struggling to get devs to read and comment on stories before a planning meeting.</p>
+<ul>
+<li>Provide a means to create an agenda</li>
+<li>Easy to find and read meeting materials (maybe a reminder X before a meeting to review notes if you haven't)</li>
+<li>Estimate how long it takes to read the materials to not have rushed meeting prep for attendees</li>
+<li>Tool for taking/sharing notes from a meeting</li>
+</ul>
+<h3 id="enroll-me-for-slack"><a class="header" href="#enroll-me-for-slack">Enroll Me for Slack</a></h3>
+<p>Long conversation in slack are often hard to stay on top of during the work day. This tool would some how extract the relevant portions of a conversation for an enrolled user to read at a later time.</p>
+<h3 id="mojotech-new-tab-homepage"><a class="header" href="#mojotech-new-tab-homepage">mojotech new tab homepage</a></h3>
+<p>Browser extension that brought in like upcoming bdays, lunches for the week, holidays, who is out of the office, upcoming team meetings, how we’re tracking on goals</p>
+<h3 id="speed-coding-challenge"><a class="header" href="#speed-coding-challenge">Speed coding challenge</a></h3>
+<p>Competitive games exist for typing and code implementation, but there appears to be a gap for reshaping code in your editor/IDE of choice. This would present editor challenges like:</p>
+<ul>
+<li>Switch case of vars</li>
+<li>Reorder words, sentences, paragraphs</li>
+<li>Advanced find/replace</li>
+<li>Extract a method</li>
+<li>Swap keys/values in a hash</li>
+<li>Repeated steps / macros</li>
+</ul>
+<p>Problems:</p>
+<ul>
+<li>IO monitoring. How do we tell if the developer is started/done?</li>
+<li>Feedback. How we let the developer know there is still work to perform.</li>
+<li>Displaying keys pressed.</li>
+<li>Recording. It would be fun to see how others solve the problem in their editor.</li>
+</ul>
+<h3 id="helios-frontend-write-sveltejs"><a class="header" href="#helios-frontend-write-sveltejs">Helios frontend write (sveltejs)</a></h3>
+<p>This is an exercise in rewriting the helios frontend in sveltejs, rollup, and polka.</p>
+<p>Problems:</p>
+<ul>
+<li>Define an interface for the client (modernizr)</li>
+<li>Learn how to use sveltejs, rollup, polka</li>
+</ul>
+<h3 id="wheres-the-line"><a class="header" href="#wheres-the-line">Where's the line</a></h3>
+<p>Description: Every year watching the super bowl, someone repeats the joke quoting some fan at a stadium asking &quot;where's the line&quot; for first down. This project would capture a live football game with the camera and draw in the line on the field beneath the players.</p>
+<p>Problems:</p>
+<ul>
+<li>Detecting football players</li>
+<li>Drawing a line on a field beneath players at a specific vector</li>
+<li>Querying the status of the game (NFL API?)</li>
+<li>Determining where the camera is looking on a field</li>
+<li>Determining where in the camera FOV the line should be drawn</li>
+</ul>
+<p>Maybe use ML? If so, new problems:</p>
+<ul>
+<li>Collecting data of players vs field</li>
+<li>Collecting data of correctly drawn lines</li>
+</ul>
+<h3 id="open-source-jamboard"><a class="header" href="#open-source-jamboard">Open source jamboard</a></h3>
+<p>Description: Google jamboard but open source. Will wants to use CRDTs.</p>
+<p>Jamboard alternatives (none of them open source):
+https://www.techrepublic.com/article/google-jamboard-too-pricy-here-are-4-low-cost-virtual-whiteboard-app-alternatives/</p>
+<p>Problems:</p>
+<ul>
+<li>Setting up a server for asynchronous communication with clients</li>
+<li>Preview (Google cast display?) and Edit (laptop/tablet)</li>
+<li>Dealing with CRDT network chattiness</li>
+<li>Integrating with third party document/file services</li>
+</ul>
+<h3 id="web-app-monitor-app"><a class="header" href="#web-app-monitor-app">Web app monitor app</a></h3>
+<p>Description: app that monitors a domain/url for a specific http response (Craig J had worked on a previous version with a former intern)</p>
+<h3 id="apple-two-factor-auth-forwarded"><a class="header" href="#apple-two-factor-auth-forwarded">Apple two factor auth forwarded</a></h3>
+<p>Description: What is happening right now is we have 2 factor codes that usually go to an Apple device that is logged in on another device. If that isn’t working you can text a code to the phone number on file. The issue with that is, what if the person isn’t around? So my idea is to set it up with a number that will then forward it to slack.</p>
+<h3 id="pull-request-cli"><a class="header" href="#pull-request-cli">Pull request CLI</a></h3>
+<p>Description: I use my editor to view the branches of pull requests since it provides a number of benefits:</p>
+<ul>
+<li>View code with preferred formatting</li>
+<li>Verify code formating and functionality locally</li>
+<li>Search for code (check for orphans or errors)</li>
+<li>Prototype inline alternatves</li>
+</ul>
+<p>Where this breaks down is viewing and adding comments. Switching to a browser to copy/paste is tedious.</p>
+<p>Problems:</p>
+<ul>
+<li>Consume pull requests API. github, maybe bitbucket. consolidation would be nice since I use both right now.</li>
+<li>Develop a CLI format for consuming/producing comments. Maybe use a linter style output since a number of editors already support that.</li>
+<li>Develop plugins for editors: vim, emacs, vscode.</li>
+<li>Integration third party issue trackers (jira, pivotal, trello). Would be nice not to search/copy/paste issue numbers when branching/committing. Could be other CLI tools.</li>
+</ul>
+<h3 id="allocate"><a class="header" href="#allocate">allocate</a></h3>
+<p>A digital product to coordinate scheduling of constrained resources. This is used to schedule which mojos are on a project and for how long.</p>
+<p>Technologies: rails and javascript (marionettejs)</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Switch to react over marionette</li>
+<li>Integration with bamboohr API for PTO sync</li>
+<li>Design team has mentioned interest</li>
+<li>Develop an API</li>
+<li>Add more clients (cli, slack)</li>
+</ul>
+<p>https://github.com/mojotech/allocate</p>
+<h3 id="standup-hub"><a class="header" href="#standup-hub">Standup Hub</a></h3>
+<p>Project management tool to share team stand ups.</p>
+<p>Technologies: go and react (15)</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Upgrade react 15 to react 16</li>
+<li>Dog-fooding. Use the tool you're working on for tasks </li>
+<li>Design team has mentioned interest</li>
+<li>Integrations with pivotal tracker, slack, and github</li>
+<li>Develop an API</li>
+<li>Different client methods (web, cli, slack)</li>
+</ul>
+<p>https://github.com/mojotech/standup-web
+https://github.com/mojotech/standup-api</p>
+<h3 id="jacobs-costing-spreadsheet"><a class="header" href="#jacobs-costing-spreadsheet">Jacob's costing spreadsheet</a></h3>
+<p>Jacob maintains a google spreadsheet once a month to assess the costing of the organization which groups costs into employees, teams, departments, locations, and clients. This process is tedious and likely can be improved with an application.</p>
+<p>Technologies: TBD</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Requirements gathering from an existing product owner </li>
+<li>Integration with existing service: allocate</li>
+</ul>
+<h3 id="guestbook-app-completion-react-native"><a class="header" href="#guestbook-app-completion-react-native">GuestBook App completion (react-native)</a></h3>
+<p>The guestbook device is currently running a web app on an iPad. Last year, Jen and Steph began work on convertting the project to a react-native application. There are still a number of open issues to resolve before the application can go live.</p>
+<p>Technologies: react-native</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Design team has mentioned interest</li>
+<li>Working in a mobile environment</li>
+<li>Improve integration with slack</li>
+</ul>
+<h3 id="guestbook-app-rewrite-flutter"><a class="header" href="#guestbook-app-rewrite-flutter">GuestBook App rewrite (flutter)</a></h3>
+<p>This is an exercise in rewriting the guestbook react-native app in dart/flutter which is an up and coming competing technology from google.</p>
+<p>Technologies: dart/flutter</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Learn a completely new language</li>
+<li>Adopt an existing projects and address its technical debt (referencing react-native guestbook)</li>
+<li>Working in a mobile environment</li>
+<li>Present comparison between flutter and react-native</li>
+</ul>
+<h3 id="pivotal-tracker-pointing-tool"><a class="header" href="#pivotal-tracker-pointing-tool">Pivotal Tracker pointing tool</a></h3>
+<p>A pivotal tracking tool for pointing stories as a team. Currently teams have count down through something like slack before posting estimates to avoid confirmation bias. This would provide a means to integrate with pivotal tracker and collect estimates to then be reconciled to a final estimate.</p>
+<p>Technologies: TBD</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Dog-fooding. Use the tool you're working on for tasks </li>
+<li>Design team has mentioned interest</li>
+<li>Integrations with pivotal tracker and slack</li>
+<li>Develop an API</li>
+<li>Different client methods (web, cli, slack)</li>
+</ul>
+<p>Existing repos: github.com/mojotech/pt-estimator/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="internship-interviews"><a class="header" href="#internship-interviews">Internship Interviews</a></h1>
+<h3 id="schedule--logistics"><a class="header" href="#schedule--logistics">Schedule + Logistics</a></h3>
+<ul>
+<li>Probably starting around mid-May, early June; let us know your availability and we'll have a more concrete start date later</li>
+<li>Usually goes until early/mid August; flexible</li>
+<li>Most folks usually work 9-5, but it's flexible; mostly concerned with getting work done</li>
+<li>Trust and trust-based time off</li>
+<li>Maybe check that they'll be local during that time; MT doesn't relocate interns</li>
+</ul>
+<h3 id="expectations"><a class="header" href="#expectations">Expectations</a></h3>
+<ul>
+<li>Learn what it's like to be on a team of professional developers</li>
+<li>Give + get good code reviews</li>
+<li>Get proficient with git, and learn how to write reviewable code</li>
+<li>You'll get something to take away from the experience</li>
+<li>Open-source their project OR</li>
+<li>Do some paid work for a client OR</li>
+<li>Contribute to an open source project</li>
+</ul>
+<h3 id="what-its-like-to-work-at-mt"><a class="header" href="#what-its-like-to-work-at-mt">What it's like to work at MT</a></h3>
+<ul>
+<li>Space for personal/professional development</li>
+<li>Stipend for conferences + books + a great ebook library</li>
+<li>MojoTime</li>
+<li>Sane work hours</li>
+<li>Consultancy</li>
+<li>Work for hire; experts</li>
+<li>Regularly rotated onto different teams/roles</li>
+<li>Variation + new outlooks/perspectives</li>
+<li>Catered lunches Tues + Fri</li>
+<li>Downtown PVD; lots of food/drink options</li>
+</ul>
+<h3 id="candidates"><a class="header" href="#candidates">Candidates</a></h3>
+<ul>
+<li>What do you know/what questions do you have about MT?</li>
+<li>What are your interests outside of coding?</li>
+<li>What are your short and log term goals?</li>
+<li>Is there any technology you really:</li>
+<li>Know?</li>
+<li>Love?</li>
+<li>Hate?</li>
+<li>Are confused by?</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mentoring"><a class="header" href="#mentoring">Mentoring</a></h1>
+<h3 id="slides"><a class="header" href="#slides">Slides</a></h3>
+<ul>
+<li><a href="./decks/2020-internship.html">2020 Internship Kickoff</a></li>
+<li><a href="./decks/2021-internship.html">2021 Internship Kickoff</a></li>
+<li><a href="./decks/2022-internship.html">2022 Internship Kickoff</a></li>
+</ul>
+<h3 id="what-we-have"><a class="header" href="#what-we-have">What we have</a></h3>
+<ul>
+<li>12 week planned internship starting May 17th</li>
+<li>4 weeks onboarding onto helios</li>
+<li>8 weeks sprints on main project</li>
+<li>Slack channel for intern help and discussion, #internship. Mentors can be added/removed from @help-interns group to be pinged for help versus passively watching.</li>
+<li>Markdown docs on netlify. You're looking at it. These cover basic set up, helios, and project ideas. Submit PRs on github.</li>
+<li>An introductory project for full stack web dev, helios.</li>
+<li>Pairing onto a client project</li>
+<li>Systra</li>
+<li>United Way</li>
+<li>https://missing.csail.mit.edu/ is a great starting point for onboarding</li>
+</ul>
+<h3 id="what-we-are-planning"><a class="header" href="#what-we-are-planning">What we are planning</a></h3>
+<ul>
+<li>Standups for checkin, code review, or concept discussion. Ideally one of these a week would introduce a new topic (git rebasing, functional programming, shell tooling, RDBMS, etc). The rest could be informal to discuss / share or just chat socially. Hallway may work this.</li>
+<li>git intro</li>
+<li>git rebasing intro</li>
+<li>how to review PRs</li>
+<li>how to point stories</li>
+<li>soft skills
+<ul>
+<li>how to research a new topic</li>
+<li>how to ask good questions</li>
+<li>how to know you're stuck</li>
+<li>how to pair program</li>
+</ul>
+</li>
+<li>Mentor stand up. Optional so don't feel obligated to join it unless you want to share or hear what is being worked on (cognizant that everyone is busy).</li>
+<li>Pair programming. LiveShare in Visual Code</li>
+</ul>
+<h3 id="how-you-can-help"><a class="header" href="#how-you-can-help">How you can help</a></h3>
+<ul>
+<li>Participate in #internship. More mentors mean the interns get help sooner and get to connect with more mojos.</li>
+<li>Review onboarding steps. We ran into some issues with nvm/rvm and need mac users to verify.</li>
+<li>Review docs. Find issues or areas for improvement.</li>
+<li>Topics/presentations for the weekly session. Think a shorter, introductory Friday tech talk.</li>
+<li>PM and designer for the two projects.</li>
+</ul>
+<h3 id="faq"><a class="header" href="#faq">FAQ</a></h3>
+<ul>
+<li>
+<p>Why #internship when we already have #engineering?</p>
+<p>We noticed the interns from previous years were hesitant to post in #engineering and their own channel seemed to help team cohesion.</p>
+</li>
+<li>
+<p>Why write these docs in a custom svelte app?</p>
+<p>¯_(ツ)_/¯</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2020-internship"><a class="header" href="#2020-internship">2020 Internship</a></h1>
+<hr />
+<h2 id="schedule"><a class="header" href="#schedule">Schedule</a></h2>
+<ul>
+<li>Kickoff</li>
+<li>1 week orientation</li>
+<li>1 week StandupHub intro</li>
+<li>6 weeks project work</li>
+</ul>
+<hr />
+<h2 id="goals"><a class="header" href="#goals">Goals</a></h2>
+<ul>
+<li>Learn how to:
+<ul>
+<li>write well formed PRs</li>
+<li>review PRs</li>
+<li>work with a team</li>
+</ul>
+</li>
+<li>The focus is learning and the programming work is a means to an end. Dive deep into topics when researching</li>
+</ul>
+<hr />
+<h2 id="kickoff"><a class="header" href="#kickoff">Kickoff</a></h2>
+<ul>
+<li>Services to join
+<ul>
+<li>github</li>
+<li>Slack</li>
+<li>Pivotal Tracker</li>
+<li>zeplin</li>
+<li>Standup Hub</li>
+</ul>
+</li>
+<li>Meet the mentors</li>
+</ul>
+<hr />
+<h2 id="bld"><a class="header" href="#bld">BLD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/33683bb275f909553804cd625db4e0bbe4ed31e2/fa8b1/img/jpg/staff/lucas.jpg" />
+    <figcaption>Allison</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/f5212e43bff0d59f8bb4687e5c9ca9a150ddeec3/4bd05/img/jpg/staff/cates.jpg" />
+    <figcaption>Ben</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/54e9255548ce36b1989ab853aa9aa0ce411c2bb9/2e0aa/img/jpg/staff/sverrisson.jpg" />
+    <figcaption>Heimir</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="pvd"><a class="header" href="#pvd">PVD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/efda86a7c4251baa5a502ad452824ccce2344954/0c650/img/jpg/staff/barber.jpg" />
+    <figcaption>Craig</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/2ddd78102bcce21542264912c7beb0188c271e1f/658ca/img/jpg/staff/lewis.jpg" />
+    <figcaption>Gerald</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://d33wubrfki0l68.cloudfront.net/7637235d7c734871cdbbc51ca69fa684e0a2fe34/c0d71/img/jpg/staff/delcioppio.jpg" />
+    <figcaption>Joe</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="orientation"><a class="header" href="#orientation">Orientation</a></h2>
+<ul>
+<li><a href="https://missing.csail.mit.edu/">The missing semester</a>
+<ul>
+<li>Review the first five chapters</li>
+<li>Ask <em>lots</em> of questions</li>
+</ul>
+</li>
+<li>Tool setup
+<ul>
+<li>Checkout <a href="https://mojodocs.netlify.com">mojodocs</a></li>
+<li>Ask fellow mojos! #internship #engineering</li>
+</ul>
+</li>
+<li>Reviewing StandupHub PRs</li>
+<li>Mentor pair programming</li>
+<li>Make your first PR</li>
+</ul>
+<hr />
+<h2 id="standuphub-intro"><a class="header" href="#standuphub-intro">StandupHub intro</a></h2>
+<ul>
+<li>Standup Hub bug fixes</li>
+<li>Standup Hub features</li>
+<li>Each PR reviewed by one other intern and one mentor</li>
+</ul>
+<hr />
+<h2 id="project-work"><a class="header" href="#project-work">Project work</a></h2>
+<ul>
+<li>Standup Hub v1 milestone</li>
+<li>Elixir/Phoenix API parity</li>
+<li>New design</li>
+<li>Github integration</li>
+<li>Slack integation </li>
+<li>MVP features</li>
+</ul>
+<hr />
+<h2 id="project-work-cont"><a class="header" href="#project-work-cont">Project work (cont)</a></h2>
+<ul>
+<li>Standup Hub v2 (maybe)</li>
+<li>Graphql API</li>
+<li>Issue tracker integration (Jira, PT)</li>
+<li>GCal integration</li>
+<li>Meeting Prep</li>
+<li>Prep for planning and grooming</li>
+<li>Search</li>
+<li>Meeting length tracking</li>
+<li>Meeting length reporting (gamification)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2021-internship"><a class="header" href="#2021-internship">2021 Internship</a></h1>
+<hr />
+<h2 id="schedule-1"><a class="header" href="#schedule-1">Schedule</a></h2>
+<ul>
+<li>Kickoff</li>
+<li>1 week orientation/setup</li>
+<li>2-3 weeks Helios project work</li>
+<li>8 weeks project work</li>
+</ul>
+<hr />
+<h2 id="goals-1"><a class="header" href="#goals-1">Goals</a></h2>
+<ul>
+<li>Learn how to:
+<ul>
+<li>write well formed PRs</li>
+<li>review PRs</li>
+<li>work with a team</li>
+</ul>
+</li>
+<li>The focus is learning and the programming work is a means to an end. Dive deep into topics when researching</li>
+</ul>
+<hr />
+<h2 id="kickoff-1"><a class="header" href="#kickoff-1">Kickoff</a></h2>
+<ul>
+<li>Services to join
+<ul>
+<li>github</li>
+<li>Slack</li>
+<li>Pivotal Tracker</li>
+<li>zeplin</li>
+<li>Standup Hub</li>
+</ul>
+</li>
+<li>Meet the mentors</li>
+</ul>
+<hr />
+<h2 id="bld-1"><a class="header" href="#bld-1">BLD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/lucas.jpg" />
+    <figcaption>Allison</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/cates.jpg" />
+    <figcaption>Ben</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/zoller.jpg" />
+    <figcaption>Cathy</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="pvd-1"><a class="header" href="#pvd-1">PVD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/cohen.jpg" />
+    <figcaption>Will</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/kaplan.jpg" />
+    <figcaption>Jen</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/barber.jpg" />
+    <figcaption>Craig</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="orientation-1"><a class="header" href="#orientation-1">Orientation</a></h2>
+<ul>
+<li><a href="https://missing.csail.mit.edu/">The missing semester</a>
+<ul>
+<li>Review the first six chapters</li>
+<li>Command-line Environment and Version Control (Git) will be really helpful</li>
+<li>Ask <em>lots</em> of questions</li>
+</ul>
+</li>
+<li>Tool setup
+<ul>
+<li>Checkout <a href="https://mojodocs.netlify.com">mojodocs</a></li>
+<li>Ask fellow mojos! #internship #engineering</li>
+</ul>
+</li>
+<li><a href="https://www.mojotech.com/blog/mojotech-git-workflow/">Mojotech Git Workflow</a></li>
+<li>Reviewing Helios PRs</li>
+<li>Mentor pair programming</li>
+<li>Make your first PR</li>
+</ul>
+<hr />
+<h2 id="helios-intro"><a class="header" href="#helios-intro">Helios intro</a></h2>
+<ul>
+<li>Helios bug fixes</li>
+<li>Helios features</li>
+<li>Each PR reviewed by one other intern and one mentor</li>
+</ul>
+<hr />
+<h2 id="project-work-1"><a class="header" href="#project-work-1">Project work</a></h2>
+<ul>
+<li>Helios v1.0 milestone</li>
+<li>Complete Graphql API </li>
+<li>BLD/PVD served from heroku</li>
+<li>Rails update</li>
+<li>Admin interface</li>
+</ul>
+<hr />
+<h2 id="project-work-cont-1"><a class="header" href="#project-work-cont-1">Project work (cont)</a></h2>
+<ul>
+<li>Helios v1.1 milestone</li>
+<li>Slack admin commands</li>
+<li>Bamboo integration
+<ul>
+<li>Weclome new employees</li>
+<li>Birthdays</li>
+<li>Anniversaries</li>
+</ul>
+</li>
+<li>Ball screen performance</li>
+<li>Service status
+<ul>
+<li>github/slack/PT/bitbucket/gsuite</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2022-internship"><a class="header" href="#2022-internship">2022 Internship</a></h1>
+<hr />
+<h2 id="schedule-2"><a class="header" href="#schedule-2">Schedule</a></h2>
+<ul>
+<li>Kickoff</li>
+<li>1 week orientation/setup</li>
+<li>2-3 weeks Helios project work</li>
+<li>8 weeks project work</li>
+</ul>
+<hr />
+<h2 id="goals-2"><a class="header" href="#goals-2">Goals</a></h2>
+<ul>
+<li>Learn how to:
+<ul>
+<li>write well formed PRs</li>
+<li>review PRs</li>
+<li>work with a team</li>
+</ul>
+</li>
+<li>The focus is learning and the programming work is a means to an end. Dive deep into topics when researching</li>
+</ul>
+<hr />
+<h2 id="kickoff-2"><a class="header" href="#kickoff-2">Kickoff</a></h2>
+<ul>
+<li>Services to join
+<ul>
+<li>github</li>
+<li>Slack</li>
+<li>Pivotal Tracker</li>
+<li>Figma</li>
+<li>Bamboo</li>
+</ul>
+</li>
+<li>Meet the mentors</li>
+</ul>
+<hr />
+<h2 id="bld-2"><a class="header" href="#bld-2">BLD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/zoller.jpg" />
+    <figcaption>Cathy</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/lucas.jpg" />
+    <figcaption>Allison</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/butt.jpg" />
+    <figcaption>Kyle</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="pvd-2"><a class="header" href="#pvd-2">PVD</a></h2>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/cohen.jpg" />
+    <figcaption>Will</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/blanchette.jpg" />
+    <figcaption>Craig</figcaption>
+  </figure>
+  <figure style="flex: 1 1 0">
+    <img src="https://mojotech.com/img/jpg/staff/barber.jpg" />
+    <figcaption>Craig</figcaption>
+  </figure>
+</div>
+<hr />
+<h2 id="orientation-2"><a class="header" href="#orientation-2">Orientation</a></h2>
+<ul>
+<li><a href="https://missing.csail.mit.edu/">The missing semester</a>
+<ul>
+<li>Review the first six chapters</li>
+<li>Command-line Environment and Version Control (Git) will be really helpful</li>
+<li>Ask <em>lots</em> of questions</li>
+</ul>
+</li>
+<li>Tool setup
+<ul>
+<li>Checkout <a href="https://mojotech.atlassian.net/wiki/spaces/DEV/pages/22183956/Introduction">confluence</a></li>
+<li>Ask fellow mojos! #internship #engineering</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="orientation-cont"><a class="header" href="#orientation-cont">Orientation (cont)</a></h2>
+<ul>
+<li><a href="https://www.mojotech.com/blog/mojotech-git-workflow/">Mojotech Git Workflow</a></li>
+<li>Reviewing Helios PRs</li>
+<li>Mentor pair programming</li>
+<li>Make your first PR</li>
+</ul>
+<hr />
+<h2 id="helios-intro-1"><a class="header" href="#helios-intro-1">Helios intro</a></h2>
+<ul>
+<li>Helios bug fixes</li>
+<li>Helios features</li>
+<li>Each PR reviewed by one other intern and one mentor</li>
+</ul>
+<hr />
+<h2 id="project-work-2"><a class="header" href="#project-work-2">Project work</a></h2>
+<ul>
+<li>Helios v1.1 milestone</li>
+<li>Bug fixes for new Phoenix server</li>
+<li>Switch admin to torch</li>
+<li>Git events outside mojotech</li>
+<li>Replace twitter with more dynamic feeds</li>
+</ul>
+<hr />
+<h2 id="project-work-cont-2"><a class="header" href="#project-work-cont-2">Project work (cont)</a></h2>
+<ul>
+<li>Helios v1.2 milestone</li>
+<li>Motion capture interaction</li>
+<li>Helios TNG work from #design
+<ul>
+<li>Mojotech Portal</li>
+<li>Help office/remote feel connected</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-cheats"><a class="header" href="#git-cheats">Git cheats</a></h1>
+<h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
+<ul>
+<li>git help <em>command</em>: get help for a git command</li>
+<li>git init: creates a new git repo, with data stored in the .git directory</li>
+<li>git status: tells you what’s going on</li>
+<li>git add <em>filename</em>: adds files to staging area</li>
+<li>git commit: creates a new commit</li>
+</ul>
+<h3 id="write-good-commit-messages"><a class="header" href="#write-good-commit-messages">Write good commit messages!</a></h3>
+<p>Even more reasons to write good commit messages!</p>
+<ul>
+<li>git log: shows a flattened log of history</li>
+<li>git log --oneline (above but condensed)</li>
+<li>git log --all --graph --decorate: visualizes history as a DAG</li>
+<li>git diff <filename>: show differences since the last commit</li>
+<li>git diff <revision> <filename>: shows differences in a file between snapshots</li>
+<li>git checkout <revision>: updates HEAD and current branch</li>
+</ul>
+<h3 id="branching-and-merging"><a class="header" href="#branching-and-merging">Branching and merging</a></h3>
+<ul>
+<li>git branch: shows branches</li>
+<li>git branch <name>: creates a branch</li>
+<li>git checkout -b <name>: creates a branch and switches to it
+same as git branch <name>; git checkout <name></li>
+<li>git switch <name>: switches to specified branch</li>
+<li>git merge <revision>: merges into current branch</li>
+<li>git mergetool: use a fancy tool to help resolve merge conflicts</li>
+<li>git rebase: rebase set of patches onto a new base</li>
+</ul>
+<h3 id="remotes"><a class="header" href="#remotes">Remotes</a></h3>
+<ul>
+<li>git remote: list remotes</li>
+<li>git remote add <name> <url>: add a remote</li>
+<li>git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference</li>
+<li>git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch</li>
+<li>git fetch: retrieve objects/references from a remote</li>
+<li>git pull: same as git fetch; git merge</li>
+<li>git clone: download repository from remote</li>
+</ul>
+<h3 id="undo"><a class="header" href="#undo">Undo</a></h3>
+<ul>
+<li>git commit --amend: edit a commit’s contents/message</li>
+<li>git reset HEAD <file>: unstage a file</li>
+<li>git checkout -- <file>: discard changes</li>
+</ul>
+<h3 id="advanced-git"><a class="header" href="#advanced-git">Advanced Git</a></h3>
+<ul>
+<li>git config: Git is highly customizable</li>
+<li>git clone --depth=1: shallow clone, without entire version history</li>
+<li>git add -p: interactive staging</li>
+<li>git rebase -i: interactive rebasing</li>
+<li>git blame: show who last edited which line</li>
+<li>git stash: temporarily remove modifications to working directory</li>
+<li>git stash pop: unstash changes and readd them to staging area</li>
+<li>git bisect: binary search history (e.g. for regressions)</li>
+<li>.gitignore: specify intentionally untracked files to ignore</li>
+</ul>
+<h3 id="adding-files"><a class="header" href="#adding-files">Adding files</a></h3>
+<ul>
+<li>git add . (adds all modified files to staging)</li>
+<li>git add <em>.filetype</em> (add only certain file types - ex. git add.html adds all .html files to staging, works for any file type)</li>
+<li></li>
+</ul>
+<h3 id="gitignore"><a class="header" href="#gitignore">.gitignore</a></h3>
+<ul>
+<li>.gitignore will not allow anything included to be staged/commited 
+log.txt - ignore this file name
+/dir2 - ignore this folder and its entire contents 
+*.txt - ignore all text files </li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+                        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+                
+    </body>
+</html>

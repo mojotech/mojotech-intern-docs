@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js latte">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Project Ideas</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="./theme/catppuccin.css">
+                <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "macchiato" : "latte";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('latte')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="02-editors.html"><strong aria-hidden="true">2.</strong> Editors</a></li><li class="chapter-item expanded "><a href="03-projects.html"><strong aria-hidden="true">3.</strong> Projects</a></li><li class="chapter-item expanded "><a href="04-project-ideas.html" class="active"><strong aria-hidden="true">4.</strong> Project Ideas</a></li><li class="chapter-item expanded "><a href="05-internship-interviews.html"><strong aria-hidden="true">5.</strong> Internship Interviews</a></li><li class="chapter-item expanded "><a href="06-mentoring.html"><strong aria-hidden="true">6.</strong> Mentoring</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="decks/2020-internship.html"><strong aria-hidden="true">6.1.</strong> 2020 Internship Kickoff</a></li><li class="chapter-item expanded "><a href="decks/2021-internship.html"><strong aria-hidden="true">6.2.</strong> 2021 Internship Kickoff</a></li><li class="chapter-item expanded "><a href="decks/2022-internship.html"><strong aria-hidden="true">6.3.</strong> 2022 Internship Kickoff</a></li></ol></li><li class="chapter-item expanded "><a href="07-git-cheats.html"><strong aria-hidden="true">7.</strong> Git Cheats</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="project-ideas"><a class="header" href="#project-ideas">Project Ideas</a></h1>
+<h3 id="meeting-preparation"><a class="header" href="#meeting-preparation">Meeting preparation</a></h3>
+<p>A tool to help meeting organizers and attendees better prepare for and record notes from a meeting. One of the discoveries from the PT Estimator requirements gathering is PMs are struggling to get devs to read and comment on stories before a planning meeting.</p>
+<ul>
+<li>Provide a means to create an agenda</li>
+<li>Easy to find and read meeting materials (maybe a reminder X before a meeting to review notes if you haven't)</li>
+<li>Estimate how long it takes to read the materials to not have rushed meeting prep for attendees</li>
+<li>Tool for taking/sharing notes from a meeting</li>
+</ul>
+<h3 id="enroll-me-for-slack"><a class="header" href="#enroll-me-for-slack">Enroll Me for Slack</a></h3>
+<p>Long conversation in slack are often hard to stay on top of during the work day. This tool would some how extract the relevant portions of a conversation for an enrolled user to read at a later time.</p>
+<h3 id="mojotech-new-tab-homepage"><a class="header" href="#mojotech-new-tab-homepage">mojotech new tab homepage</a></h3>
+<p>Browser extension that brought in like upcoming bdays, lunches for the week, holidays, who is out of the office, upcoming team meetings, how we’re tracking on goals</p>
+<h3 id="speed-coding-challenge"><a class="header" href="#speed-coding-challenge">Speed coding challenge</a></h3>
+<p>Competitive games exist for typing and code implementation, but there appears to be a gap for reshaping code in your editor/IDE of choice. This would present editor challenges like:</p>
+<ul>
+<li>Switch case of vars</li>
+<li>Reorder words, sentences, paragraphs</li>
+<li>Advanced find/replace</li>
+<li>Extract a method</li>
+<li>Swap keys/values in a hash</li>
+<li>Repeated steps / macros</li>
+</ul>
+<p>Problems:</p>
+<ul>
+<li>IO monitoring. How do we tell if the developer is started/done?</li>
+<li>Feedback. How we let the developer know there is still work to perform.</li>
+<li>Displaying keys pressed.</li>
+<li>Recording. It would be fun to see how others solve the problem in their editor.</li>
+</ul>
+<h3 id="helios-frontend-write-sveltejs"><a class="header" href="#helios-frontend-write-sveltejs">Helios frontend write (sveltejs)</a></h3>
+<p>This is an exercise in rewriting the helios frontend in sveltejs, rollup, and polka.</p>
+<p>Problems:</p>
+<ul>
+<li>Define an interface for the client (modernizr)</li>
+<li>Learn how to use sveltejs, rollup, polka</li>
+</ul>
+<h3 id="wheres-the-line"><a class="header" href="#wheres-the-line">Where's the line</a></h3>
+<p>Description: Every year watching the super bowl, someone repeats the joke quoting some fan at a stadium asking &quot;where's the line&quot; for first down. This project would capture a live football game with the camera and draw in the line on the field beneath the players.</p>
+<p>Problems:</p>
+<ul>
+<li>Detecting football players</li>
+<li>Drawing a line on a field beneath players at a specific vector</li>
+<li>Querying the status of the game (NFL API?)</li>
+<li>Determining where the camera is looking on a field</li>
+<li>Determining where in the camera FOV the line should be drawn</li>
+</ul>
+<p>Maybe use ML? If so, new problems:</p>
+<ul>
+<li>Collecting data of players vs field</li>
+<li>Collecting data of correctly drawn lines</li>
+</ul>
+<h3 id="open-source-jamboard"><a class="header" href="#open-source-jamboard">Open source jamboard</a></h3>
+<p>Description: Google jamboard but open source. Will wants to use CRDTs.</p>
+<p>Jamboard alternatives (none of them open source):
+https://www.techrepublic.com/article/google-jamboard-too-pricy-here-are-4-low-cost-virtual-whiteboard-app-alternatives/</p>
+<p>Problems:</p>
+<ul>
+<li>Setting up a server for asynchronous communication with clients</li>
+<li>Preview (Google cast display?) and Edit (laptop/tablet)</li>
+<li>Dealing with CRDT network chattiness</li>
+<li>Integrating with third party document/file services</li>
+</ul>
+<h3 id="web-app-monitor-app"><a class="header" href="#web-app-monitor-app">Web app monitor app</a></h3>
+<p>Description: app that monitors a domain/url for a specific http response (Craig J had worked on a previous version with a former intern)</p>
+<h3 id="apple-two-factor-auth-forwarded"><a class="header" href="#apple-two-factor-auth-forwarded">Apple two factor auth forwarded</a></h3>
+<p>Description: What is happening right now is we have 2 factor codes that usually go to an Apple device that is logged in on another device. If that isn’t working you can text a code to the phone number on file. The issue with that is, what if the person isn’t around? So my idea is to set it up with a number that will then forward it to slack.</p>
+<h3 id="pull-request-cli"><a class="header" href="#pull-request-cli">Pull request CLI</a></h3>
+<p>Description: I use my editor to view the branches of pull requests since it provides a number of benefits:</p>
+<ul>
+<li>View code with preferred formatting</li>
+<li>Verify code formating and functionality locally</li>
+<li>Search for code (check for orphans or errors)</li>
+<li>Prototype inline alternatves</li>
+</ul>
+<p>Where this breaks down is viewing and adding comments. Switching to a browser to copy/paste is tedious.</p>
+<p>Problems:</p>
+<ul>
+<li>Consume pull requests API. github, maybe bitbucket. consolidation would be nice since I use both right now.</li>
+<li>Develop a CLI format for consuming/producing comments. Maybe use a linter style output since a number of editors already support that.</li>
+<li>Develop plugins for editors: vim, emacs, vscode.</li>
+<li>Integration third party issue trackers (jira, pivotal, trello). Would be nice not to search/copy/paste issue numbers when branching/committing. Could be other CLI tools.</li>
+</ul>
+<h3 id="allocate"><a class="header" href="#allocate">allocate</a></h3>
+<p>A digital product to coordinate scheduling of constrained resources. This is used to schedule which mojos are on a project and for how long.</p>
+<p>Technologies: rails and javascript (marionettejs)</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Switch to react over marionette</li>
+<li>Integration with bamboohr API for PTO sync</li>
+<li>Design team has mentioned interest</li>
+<li>Develop an API</li>
+<li>Add more clients (cli, slack)</li>
+</ul>
+<p>https://github.com/mojotech/allocate</p>
+<h3 id="standup-hub"><a class="header" href="#standup-hub">Standup Hub</a></h3>
+<p>Project management tool to share team stand ups.</p>
+<p>Technologies: go and react (15)</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Upgrade react 15 to react 16</li>
+<li>Dog-fooding. Use the tool you're working on for tasks </li>
+<li>Design team has mentioned interest</li>
+<li>Integrations with pivotal tracker, slack, and github</li>
+<li>Develop an API</li>
+<li>Different client methods (web, cli, slack)</li>
+</ul>
+<p>https://github.com/mojotech/standup-web
+https://github.com/mojotech/standup-api</p>
+<h3 id="jacobs-costing-spreadsheet"><a class="header" href="#jacobs-costing-spreadsheet">Jacob's costing spreadsheet</a></h3>
+<p>Jacob maintains a google spreadsheet once a month to assess the costing of the organization which groups costs into employees, teams, departments, locations, and clients. This process is tedious and likely can be improved with an application.</p>
+<p>Technologies: TBD</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Requirements gathering from an existing product owner </li>
+<li>Integration with existing service: allocate</li>
+</ul>
+<h3 id="guestbook-app-completion-react-native"><a class="header" href="#guestbook-app-completion-react-native">GuestBook App completion (react-native)</a></h3>
+<p>The guestbook device is currently running a web app on an iPad. Last year, Jen and Steph began work on convertting the project to a react-native application. There are still a number of open issues to resolve before the application can go live.</p>
+<p>Technologies: react-native</p>
+<p>Opportunities:</p>
+<ul>
+<li>Adopt an existing projects and address its technical debt</li>
+<li>Design team has mentioned interest</li>
+<li>Working in a mobile environment</li>
+<li>Improve integration with slack</li>
+</ul>
+<h3 id="guestbook-app-rewrite-flutter"><a class="header" href="#guestbook-app-rewrite-flutter">GuestBook App rewrite (flutter)</a></h3>
+<p>This is an exercise in rewriting the guestbook react-native app in dart/flutter which is an up and coming competing technology from google.</p>
+<p>Technologies: dart/flutter</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Learn a completely new language</li>
+<li>Adopt an existing projects and address its technical debt (referencing react-native guestbook)</li>
+<li>Working in a mobile environment</li>
+<li>Present comparison between flutter and react-native</li>
+</ul>
+<h3 id="pivotal-tracker-pointing-tool"><a class="header" href="#pivotal-tracker-pointing-tool">Pivotal Tracker pointing tool</a></h3>
+<p>A pivotal tracking tool for pointing stories as a team. Currently teams have count down through something like slack before posting estimates to avoid confirmation bias. This would provide a means to integrate with pivotal tracker and collect estimates to then be reconciled to a final estimate.</p>
+<p>Technologies: TBD</p>
+<p>Opportunities:</p>
+<ul>
+<li>Bootstrap a new project</li>
+<li>Dog-fooding. Use the tool you're working on for tasks </li>
+<li>Design team has mentioned interest</li>
+<li>Integrations with pivotal tracker and slack</li>
+<li>Develop an API</li>
+<li>Different client methods (web, cli, slack)</li>
+</ul>
+<p>Existing repos: github.com/mojotech/pt-estimator/</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="03-projects.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="05-internship-interviews.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="03-projects.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="05-internship-interviews.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
