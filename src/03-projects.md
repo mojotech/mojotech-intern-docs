@@ -1,5 +1,27 @@
 # Projects
 
+## Current
+
+### Save 58
+
+**Inspiration**: [Kurzgesagt – In a Nutshell: This Video Might Save 58 Lives Next Week](https://www.youtube.com/watch?v=oTx-GSF3cts&rco=1)
+
+**Hypothesis**: Can an automated message (email, tweet, slack, video) save lives?
+
+**Premise**: Can providing statistically likely causes for death or injury for a specific person's demographic (age, gender, profession) combined with current conditions (date, geography, weather) result in that person being mindful of the particular danger to save their life?
+
+Pros:
+* This is a deceptively hard problem involving multi dimensional. big data. It could easily keep intern teams occupied for several years
+* Decomposable. Its possible to focus this project into smaller, month long deliverables that are challenging.
+* Motivational mission. It feels good to do some good.
+* Potentially marketable as doing good
+
+Cons:
+* Delicate topics for the work place. See the video.
+* Not profitable without turning people into the product.
+
+## Legacy
+
 ### Helios
 
 Helios is our weather/welcome display for the Providence and Boulder front door. It serves as an opportunity to welcome guests and show off some our technical expertise.
