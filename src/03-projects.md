@@ -21,7 +21,97 @@ Cons:
 - Delicate topics for the work place. See the video.
 - Not profitable without turning people into the product.
 
-#### Thoughts
+[Impact Map](https://www.figma.com/board/fFXs28L1ksyuKkQVtAs3Vc/Save58?node-id=0-1&p=f&t=BZtWKYV4vGrxN5Zc-0)
+
+#### Business Value
+
+- Data science tooling
+  - iceburg
+  - developing a model
+- Data/ETL
+  - repeatable data scraping
+  - automated data evaluation
+- New technologies
+  - sveltekit
+  - nix/flake
+  - tauri
+  - multi dimension database
+  - automated web scrapping
+  - biome
+
+#### Next steps
+
+- Week 0
+  1. Evaluate data
+  1. Boot strap project
+     - Repo
+       - monorepo
+       - think about directory structure for data, server, client
+     - Tooling: direnv / nix flake <- Daniel or Kyle?
+     - Typescript/Sveltekit
+       - tooling/one off scripts can be polyglot
+     - Linter/formatter - [biome](https://github.com/biomejs/biome)
+     - Postgresql docker?
+     - CI - github actions
+     - README
+  1. Management
+     - Assign primary mentors
+       - pick days in office
+     - Laptops - MCD acting
+     - github/slack access
+  1. Impact map/Stories
+     - Review notes
+     - Need more challenges
+- Week 1
+  - [The missing semester](https://missing.csail.mit.edu/)
+    - Review the first six chapters
+    - Command-line Environment and Version Control (Git) will be really helpful
+    - Ask lots of questions
+  - link [4cs](https://www.mojotech.com/blog/the-4cs-a-code-review-mnemonic/)
+  - Tool setup
+    - Checkout github repo. Work through README
+    - Ask fellow mojos! #internship #engineering
+  - First commit?
+  - Discovery
+- Week 2 - atomic commits / unraveling git commit
+  - auth
+    - auth0?
+    - <https://svelte.dev/docs/kit/auth>
+  - Implement boilerplate design? Jesse has a headless UI library he likes
+    - Anonymous user landing page
+    - Authenticated user page
+    - privacy policy
+  - Scraping/Data collection
+    - Aggregate data
+    - Automate import into database
+  - unit test / some web output for
+    > Week before day light savings time, "start shifting your schedule by 15 minutes earlier/later. heart attacks and car crashes increase after day light savings time due to sleep deprivation"
+- Week 3
+  - Ticket work.
+- Week 4
+  - Ticket work.
+
+##### Shallow vs deep
+
+Shallow is a first step to get something working. Deep is a thorough tech investigation
+
+###### Shallow
+
+- Json / csv in git
+- Manual algorithm
+- Web app only
+- Manual notification trigger via web
+- Manual data scrapping
+
+###### Deep
+
+- Apache iceburg for storage sharing. Data lake. <- Eric Gibb
+- Multi dimension data in postgresql / vector storage
+- Desktop/mobile version via Tauri
+- Worker queue for pre calculating and notifications. Different queue/worker than previous mojo work not redis/sidekiq/bullmq
+- Automated LLMs scrapping
+
+###### Thoughts
 
 We should have a very clear [privacy policy](https://openpd.org/)
 
