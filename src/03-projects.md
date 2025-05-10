@@ -86,6 +86,29 @@ Cons:
     - Automate import into database
   - unit test / some web output for
     > Week before day light savings time, "start shifting your schedule by 15 minutes earlier/later. heart attacks and car crashes increase after day light savings time due to sleep deprivation"
+  - video parity
+    - 3 million people will watch this video
+      - 15-35
+      - living in western countries
+    - driving
+      - 8 in car crash next week. 416 of you over the next year. 2m29s
+        - 2: 30% from speeding
+        - 2: 25% from drinking and driving
+        - 1: from distracted
+        - 3: from not wearing a seat belt
+      - 26 by falling in the next year. 5m17s
+        - scaffolding, ladders, hiking
+      - 1 of you will drown next week. 6m07s
+        - over estimate swimming abilities
+        - go into the water drunk
+        - cruise ships
+      - 10 of you will die from self harm next week 7m12s
+        - crisis situations triggered by traumatic events and extraordinary situations
+        - resources for help
+      - 5 of you will from cancer next week 8m52s
+        - regular checkups and screenings
+        - sunscreen
+    - sharing
 - Week 3
   - Ticket work.
 - Week 4
